@@ -5,8 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "AudioRecoderTool",
+    defaultLocalization: "en",
+    platforms: [.iOS(.v11)],
     products: [
-        .library(name: "AudioRecoderTool", targets: ["AudioRecoderTool"]),
+        .library(name: "AudioRecoderTool", targets: ["AudioRecoderTool"])
     ],
     dependencies: [],
     targets: [
@@ -14,3 +16,4 @@ let package = Package(
         .testTarget(name: "AudioRecoderToolTests", dependencies: ["AudioRecoderTool"]),
     ]
 )
+
