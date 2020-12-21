@@ -10,7 +10,6 @@ let package = Package(
     products: [
         .library(name: "AudioRecoderTool", targets: ["AudioRecoderTool"])
     ],
-    dependencies: [],
     targets: [
         .target(name: "AudioRecoderTool", dependencies: []),
         .testTarget(name: "AudioRecoderToolTests", dependencies: ["AudioRecoderTool"]),
