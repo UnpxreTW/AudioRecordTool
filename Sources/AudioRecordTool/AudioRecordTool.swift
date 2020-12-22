@@ -11,11 +11,11 @@ import AVFoundation
 @available(iOS 14.0, *)
 let logger: Logger = .init(subsystem: "AudioRecoderTool.component", category: "Recoder")
 
-public final class AudioRecoderTool {
+public final class AudioRecordTool {
     
     // MARK: Public Variable
     
-    public static var shared = AudioRecoderTool()
+    public static var shared = AudioRecordTool()
     /// 在不同機器實體上的麥克風會取得不同的位元率，讀取此值以取得麥克風的位元率
     public var inputSampleRate: Double { inputFormat.sampleRate }
     
