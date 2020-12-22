@@ -84,6 +84,8 @@ public final class AudioRecordTool {
     
     public func startRecord() {
         guard !engine.isRunning else { return }
+        setSessionToRecoder()
+        try? engine.start()
     }
     
     public func stopRecord() {
