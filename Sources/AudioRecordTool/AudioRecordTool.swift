@@ -72,7 +72,7 @@ public final class AudioRecordTool {
         }
         engine.connect(engine.inputNode, to: formatTransducerNode, format: inputFormat)
         engine.connect(formatTransducerNode, to: setVolumeZeroNode, format: expectFormat)
-        engine.connect(setVolumeZeroNode, to: engine.outputNode, format: expectFormat)
+        engine.connect(setVolumeZeroNode, to: engine.mainMixerNode, format: expectFormat)
         setVolumeZeroNode.volume = 0
         engine.prepare()
         enginePrepared = true
