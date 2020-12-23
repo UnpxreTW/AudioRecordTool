@@ -4,13 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "AudioRecoderTool",
+    name: "AudioRecordTool",
+    defaultLocalization: "en",
+    platforms: [.iOS(.v11)],
     products: [
-        .library(name: "AudioRecoderTool", targets: ["AudioRecoderTool"]),
+        .library(name: "AudioRecordTool", targets: ["AudioRecordTool"])
     ],
-    dependencies: [],
     targets: [
-        .target(name: "AudioRecoderTool", dependencies: []),
-        .testTarget(name: "AudioRecoderToolTests", dependencies: ["AudioRecoderTool"]),
+        .target(name: "AudioRecordTool", dependencies: []),
+        .testTarget(name: "AudioRecordToolTests", dependencies: ["AudioRecordTool"]),
     ]
 )
+
