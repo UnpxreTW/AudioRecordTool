@@ -80,6 +80,10 @@ public final class AudioRecordTool {
     
     public func unprepareEngine() {
         guard enginePrepared, !engine.isRunning else { return }
+        formatTransducerNode.removeTap(onBus: 0)
+        engine.detach(formatTransducerNode)
+        engine.detach(setVolumeZeroNode)
+        enginePrepared = false
     }
     
     public func startRecord() {
@@ -94,7 +98,7 @@ public final class AudioRecordTool {
             logger.info("Stoping Engine...")
         }
         engine.stop()
-        enginePrepared = false
+        unprepareEngine()
         engine.reset()
         setSessionToDefault()
         if #available(iOS 14.0, *) {
