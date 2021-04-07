@@ -117,7 +117,7 @@ public final class AudioRecordTool {
             try session.setCategory(
                 .playAndRecord,
                 mode: .videoRecording,
-                options: [.interruptSpokenAudioAndMixWithOthers])
+                options: [.interruptSpokenAudioAndMixWithOthers, .allowBluetooth])
             try session.setPreferredIOBufferDuration(0.005)
             try session.setActive(true)
         } catch let error {
