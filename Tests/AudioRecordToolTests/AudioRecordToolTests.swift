@@ -1,5 +1,5 @@
 import XCTest
-@testable import AudioRecoderTool
+@testable import AudioRecordTool
 
 final class AudioRecoderToolTests: XCTestCase {
     func testExample() {}
